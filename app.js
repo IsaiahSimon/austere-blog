@@ -41,6 +41,18 @@ app.post("/compose", (req, res) => {
   res.redirect("/");
 });
 
+// Make url for each post
+app.get("/posts/:postName", (req, res) => {
+  const requestedTitle = _.lowerCase(req.params.postName); // also ignore kebab case
+
+  posts.forEach(post => {
+    const storedTitle = _.lowerCase(post.title); // also ignore kebab case
+
+    if (storedTitle === requestedTitle) {
+      res.render("post", { title: post.title, content: post.content }); // render post.ejs
+    };
+  });
+});
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
