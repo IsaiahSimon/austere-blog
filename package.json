@@ -1,10 +1,10 @@
 {
-  "name": "ejs-challenge",
+  "name": "austere",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimalistic personal blog generated using EJS partials.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +15,14 @@
     "express": "^4.16.3",
     "lodash": "^4.17.21",
     "mongoose": "^6.3.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaiahSimon/austere-blog.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/IsaiahSimon/austere-blog/issues"
+  },
+  "homepage": "https://github.com/IsaiahSimon/austere-blog#readme"
 }
