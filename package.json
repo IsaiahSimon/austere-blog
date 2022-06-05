@@ -4,7 +4,6 @@
   "description": "A minimalistic personal blog generated using EJS partials.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
