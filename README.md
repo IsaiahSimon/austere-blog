@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Project Name Screen Shot][project-screenshot]](https://austere-blog.herokuapp.com/)
+[![Product Name Screen Shot][product-screenshot]](https://austere-blog.herokuapp.com/)
 
 A beautiful minimalistic personal blog website. Features a header with navbar and brand, a sticky footer and multiple pages, all generated using EJS partials.
 
