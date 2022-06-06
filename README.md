@@ -1,8 +1,3 @@
-# Austere Blog
-A minimalistic personal blog generated using EJS partials.
-
-To avoid retyping too much info. Do a search and replace with your text editor for the following: `austere-blog`,`Austere Blog`, `A minimalistic personal blog generated using EJS partials.`, `project_link`, `product_screenshot`
-
 <div id="top"></div>
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -24,12 +19,12 @@ To avoid retyping too much info. Do a search and replace with your text editor f
 <h3 align="center">Austere Blog</h3>
 
   <p align="center">
-    A minimalistic personal blog generated using EJS partials.
+    A minimalistic personal blog generated using EJS layout and templating!
     <br />
     <a href="https://github.com/IsaiahSimon/austere-blog"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="project_link">View Demo</a>
+    <a href="https://austere-blog.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/IsaiahSimon/austere-blog/issues">Report Bug</a>
     ·
@@ -49,10 +44,10 @@ To avoid retyping too much info. Do a search and replace with your text editor f
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#lessons-learned">Lessons Learned</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -70,15 +65,14 @@ To avoid retyping too much info. Do a search and replace with your text editor f
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Project Name Screen Shot][project-screenshot]](project_link)
+[![Project Name Screen Shot][project-screenshot]](https://austere-blog.herokuapp.com/)
 
-EXPLAIN THE PROJECT HERE...
-* How to do something #1
-* How to do something #2
+A beautiful minimalistic personal blog website. Features a header with navbar and brand, a sticky footer and multiple pages, all generated using EJS partials.
+
+* You can read individual posts on their own generate page.
+* You can dynamically compose new posts using the hidden "/compose" page.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With
 
@@ -93,45 +87,40 @@ EXPLAIN THE PROJECT HERE...
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- LESSONS LEARNED -->
+## Lessons Learned
+<details>
+<summary>
+Ironically, I learned a great deal about serverless deployment using Netlify and AWS Lambda, even though this project is now deployed on Heroku...
+</summary>
+
+Ultimately I couldn't get the EJS that this project relies on to play nicely with Netlify Functions. I believe this to be an access issue since private server-side Functions are handled by AWS Lambda, and public static resources are distributed across Netlify's CDN.
+
+I will be revisiting this deployment strategy in another project, or update this one when I have more insight.
+
+**Netlify serverless:**
+- using Netlify CLI to deploy an app to production
+- built a netlify-express demo app to learn the process
+- preparing an app for serverless deployment
+- netilify.toml, build command and redirects
+- how functions within the "my_functions" folder are handled by AWS Lambda
+- how static resources are distributed from the publish directory, "dist" folder, across Netlify's CDN
+- how configure environment vars on Netlify
+</details>
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/IsaiahSimon/austere-blog.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -141,9 +130,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Set up the project locally or use the [demo](project_link) of the fullstack app.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Set up the project locally or use the [demo](https://austere-blog.herokuapp.com/) of the fullstack app.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -152,19 +139,14 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Improve front-end UI
+- [ ] Add login page for composing new posts
+
 
 See the [open issues](https://github.com/IsaiahSimon/austere-blog/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- LESSONS LEARNED -->
-## Lessons Learned
-
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those whoa this is awesome or fuck yeah I did it! moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -207,9 +189,11 @@ Project Link: [https://github.com/IsaiahSimon/austere-blog](https://github.com/I
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Working with multiple Git remotes](https://jigarius.com/blog/multiple-git-remote-repositories)
+* [Preparing a Codebase for Heroku Deployment](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment)
+* [Heroku Express App Vs Netlify Serverless App](https://www.youtube.com/watch?v=hpvCd5WKGLU)
+* [A better git log](https://coderwall.com/p/euwpig/a-better-git-log)
+* [Define config vars](https://devcenter.heroku.com/articles/getting-started-with-nodejs#define-config-vars)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -229,4 +213,4 @@ Project Link: [https://github.com/IsaiahSimon/austere-blog](https://github.com/I
 [license-url]: https://github.com/IsaiahSimon/austere-blog/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/isaiahsimon101
-[product-screenshot]: product_screenshot
+[product-screenshot]: ./public/images/gif-austere.gif
