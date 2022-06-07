@@ -141,6 +141,7 @@ Set up the project locally or use the [demo](https://austere-blog.herokuapp.com/
 
 - [ ] Improve front-end UI
 - [ ] Add login page for composing new posts
+- [ ] Add user Authentication & Security
 
 
 See the [open issues](https://github.com/IsaiahSimon/austere-blog/issues) for a full list of proposed features (and known issues).
